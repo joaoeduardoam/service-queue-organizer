@@ -12,6 +12,10 @@ public class Main {
         QueueSimulator.addClient(new Person("Pedro"));
         QueueSimulator.processService();
 
+        System.out.println("customerArrivalTime: "+QueueSimulator.customerArrivalTime());
+
+        System.out.println("serviceTime: "+QueueSimulator.serviceTime());
+
 
     }
 }
