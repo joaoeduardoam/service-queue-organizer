@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c54c946-13bf-42db-8830-a567853f93bb" name="Changes" comment="" />
+    <list default="true" id="7c54c946-13bf-42db-8830-a567853f93bb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +42,7 @@
     "Application.ServiceQueueOrganizer.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "random-number-generation",
+    "git-widget-placeholder": "simulation-statistics",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Projetos Dev/service-queue-organizer",
     "project.structure.last.edited": "Modules",
