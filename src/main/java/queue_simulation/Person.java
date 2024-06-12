@@ -10,6 +10,8 @@ public class Person {
 
     private int serviceTime;
 
+    private int waitTime;
+
 
     private static int count = 0;
 
@@ -29,6 +31,7 @@ public class Person {
                 ", ticket=" + ticket +
                 ", arrivalTime=" + arrivalTime +
                 ", serviceTime=" + serviceTime +
+                ", waitTime=" + waitTime +
                 '}';
     }
 
@@ -51,6 +54,14 @@ public class Person {
 
     public int getArrivalTime() {
         return arrivalTime;
+    }
+
+    public int getWaitTime() {
+        return waitTime;
+    }
+
+    public void setWaitTime(int waitTime) {
+        this.waitTime = waitTime;
     }
 
     public void setArrivalTime(int arrivalTime) {

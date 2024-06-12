@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7c54c946-13bf-42db-8830-a567853f93bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" afterDir="false" />
     </list>
@@ -84,5 +83,46 @@
       <updated>1717638824856</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
