@@ -8,6 +8,8 @@ public class QueueSimulator {
 
     public static List<Person> peopleServed = new ArrayList<>();
 
+    public static int idleTime = 0;
+
     static Random generator = new Random();
 
     public static void addClients(){
@@ -15,8 +17,8 @@ public class QueueSimulator {
         System.out.println(serviceQueue);
         serviceQueue.add(new Person("Joao"));
         serviceQueue.add(new Person("Amanda"));
-//        serviceQueue.add(new Person("Yan"));
-//        serviceQueue.add(new Person("Maria"));
+        serviceQueue.add(new Person("Yan"));
+        serviceQueue.add(new Person("Maria"));
         System.out.println(serviceQueue);
 
     }
@@ -38,14 +40,14 @@ public class QueueSimulator {
 
         person.setServiceTime(generateServiceTime());
 
-        if (person.getTicket()>1){
+        if (person.getTicket()>1){                      // Check if is the first in line
 
-            Person previousPerson = peopleServed.get(person.getTicket()-2);
+            int currentArrivalTime = sumOfPreviousArrivalTimes(person.getTicket()) + person.getArrivalTime();
 
-            //int waitTime = previousPerson.getServiceTime()-person.getArrivalTime();
+            idleTime += Math.max( 0, currentArrivalTime - sumOfPreviousServiceTimes(person.getTicket()) - idleTime);
+            System.out.println("IDLE TIME de "+person.getTicket()+": "+idleTime);
 
-            int waitTime = sumOfPreviousServiceTimes(person.getTicket()) - (sumOfPreviousArrivalTimes(person.getTicket())
-                                                                                            + person.getArrivalTime());
+            int waitTime = ( sumOfPreviousServiceTimes(person.getTicket()) + idleTime ) - currentArrivalTime;
 
             if (waitTime < 0){
                 person.setWaitTime(0);
@@ -60,7 +62,6 @@ public class QueueSimulator {
 
         peopleServed.add(person);
 
-
     }
 
     private static int sumOfPreviousServiceTimes(int ticket) {
@@ -70,8 +71,6 @@ public class QueueSimulator {
         for (int i=0; i<ticket-1;i++){
             sum+=peopleServed.get(i).getServiceTime();
         }
-
-
 
         return sum;
 
@@ -89,17 +88,28 @@ public class QueueSimulator {
 
     }
 
+    public static float averageWaitTime(){
+
+        int sum=0;
+
+        for (Person person : peopleServed ){
+            sum+=person.getWaitTime();
+        }
+
+        var average = sum / peopleServed.size();
+
+        return average;
+    }
+
     public static int generateArrivalTime(){
 
         int arrivalTime = generator.nextInt(10) + 1; //between 1 and 10 minutes
-        System.out.println(arrivalTime);
         return arrivalTime;
     }
 
     public static int generateServiceTime(){
 
-        int serviceTime = generator.nextInt(15) + 5; //between 5 and 29 minutes
-        System.out.println(serviceTime);
+        int serviceTime = generator.nextInt(5) + 5; //between 5 and 20 minutes
         return serviceTime;
     }
 

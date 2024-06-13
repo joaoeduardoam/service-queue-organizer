@@ -9,8 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         QueueSimulator.addClients();
-        QueueSimulator.addClient(new Person("Pedro"));
-        QueueSimulator.processService();
+        //QueueSimulator.addClient(new Person("Pedro"));
 
         while (!QueueSimulator.serviceQueue.isEmpty()){
             QueueSimulator.processService();
@@ -18,6 +17,8 @@ public class Main {
 
 
         System.out.println(QueueSimulator.peopleServed);
+
+        System.out.println("Average Wait Time: "+QueueSimulator.averageWaitTime());
 
 
 
