@@ -1,5 +1,7 @@
 package queue_simulation;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.*;
 
 public class QueueSimulator {
@@ -8,7 +10,7 @@ public class QueueSimulator {
 
     public static List<Person> peopleServed = new ArrayList<>();
 
-    public static int idleTime = 0;
+    private static int idleTime = 0;
 
     static Random generator = new Random();
 
@@ -101,6 +103,35 @@ public class QueueSimulator {
         return average;
     }
 
+    public static float averageTimeInTheSystem(){
+
+        int sum=0;
+
+        for (Person person : peopleServed ){
+            sum+=person.getWaitTime()+person.getServiceTime();
+        }
+
+        var average = sum / peopleServed.size();
+
+        return average;
+    }
+
+    public static BigDecimal serverOccupancyRate(){
+
+        int sum=0;
+
+        for (Person person : peopleServed ){
+            sum+=person.getServiceTime();
+        }
+
+        var rate = (float) sum / (sum + idleTime);
+
+        BigDecimal rateScaled = BigDecimal.valueOf(rate*100).setScale(2, RoundingMode.CEILING);
+
+        return rateScaled;
+
+    }
+
     public static int generateArrivalTime(){
 
         int arrivalTime = generator.nextInt(10) + 1; //between 1 and 10 minutes
@@ -113,5 +144,7 @@ public class QueueSimulator {
         return serviceTime;
     }
 
-
+    public static int getIdleTime() {
+        return idleTime;
+    }
 }

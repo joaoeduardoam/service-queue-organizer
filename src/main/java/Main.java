@@ -19,6 +19,9 @@ public class Main {
         System.out.println(QueueSimulator.peopleServed);
 
         System.out.println("Average Wait Time: "+QueueSimulator.averageWaitTime());
+        System.out.println("Average Time in the System: "+QueueSimulator.averageTimeInTheSystem());
+        System.out.println("Server Occupancy Rate: "+QueueSimulator.serverOccupancyRate()+"%");
+        System.out.println("Idle Time: "+QueueSimulator.getIdleTime());
 
 
 
