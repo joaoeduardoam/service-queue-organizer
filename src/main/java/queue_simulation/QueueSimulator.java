@@ -98,7 +98,7 @@ public class QueueSimulator {
             sum+=person.getWaitTime();
         }
 
-        var average = sum / peopleServed.size();
+        var average = (float) sum / peopleServed.size();
 
         return average;
     }
@@ -111,7 +111,7 @@ public class QueueSimulator {
             sum+=person.getWaitTime()+person.getServiceTime();
         }
 
-        var average = sum / peopleServed.size();
+        var average = (float) sum / peopleServed.size();
 
         return average;
     }
