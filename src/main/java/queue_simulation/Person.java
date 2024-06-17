@@ -21,6 +21,12 @@ public class Person {
     public Person(String name) {
         this.name = name;
         this.ticket = count+1;
+        if(ticket==1) {
+            this.arrivalTime = 0;
+        }else{
+            this.arrivalTime = QueueSimulator.generateArrivalTime();
+        }
+        this.serviceTime=QueueSimulator.generateServiceTime();
         count+=1;
     }
 
@@ -35,20 +41,9 @@ public class Person {
                 '}';
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getTicket() {
         return ticket;
-    }
-
-    public void setTicket(int ticket) {
-        this.ticket = ticket;
     }
 
 
@@ -64,16 +59,9 @@ public class Person {
         this.waitTime = waitTime;
     }
 
-    public void setArrivalTime(int arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
-
     public int getServiceTime() {
         return serviceTime;
     }
 
-    public void setServiceTime(int serviceTime) {
-        this.serviceTime = serviceTime;
-    }
 
 }

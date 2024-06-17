@@ -6,9 +6,9 @@ import java.util.*;
 
 public class QueueSimulator {
 
-    public static Queue<Person> serviceQueue = new LinkedList<>();
+    private static final Queue<Person> serviceQueue = new LinkedList<>();
 
-    public static List<Person> peopleServed = new ArrayList<>();
+    private static final List<Person> peopleServed = new ArrayList<>();
 
     private static int idleTime = 0;
 
@@ -16,38 +16,25 @@ public class QueueSimulator {
 
     public static void addClients(){
 
-        System.out.println(serviceQueue);
         serviceQueue.add(new Person("Joao"));
         serviceQueue.add(new Person("Amanda"));
         serviceQueue.add(new Person("Yan"));
         serviceQueue.add(new Person("Maria"));
-        System.out.println(serviceQueue);
 
     }
 
-    public static void addClient(Person person){
-        serviceQueue.add(person);
-        System.out.println(serviceQueue);
-    }
 
     public static void processService(){
         Person person = serviceQueue.poll();
-        System.out.println(serviceQueue);
 
-        if (person.getTicket()==1){
-            person.setArrivalTime(0);
-        }else {
-            person.setArrivalTime(generateArrivalTime());
-        }
 
-        person.setServiceTime(generateServiceTime());
-
-        if (person.getTicket()>1){                      // Check if is the first in line
+        // If is not the first in line, Set the system idle time and the respective waitTime
+        if (person.getTicket()>1){
 
             int currentArrivalTime = sumOfPreviousArrivalTimes(person.getTicket()) + person.getArrivalTime();
 
             idleTime += Math.max( 0, currentArrivalTime - sumOfPreviousServiceTimes(person.getTicket()) - idleTime);
-            System.out.println("IDLE TIME de "+person.getTicket()+": "+idleTime);
+            //System.out.println("IDLE TIME de "+person.getTicket()+": "+idleTime);
 
             int waitTime = ( sumOfPreviousServiceTimes(person.getTicket()) + idleTime ) - currentArrivalTime;
 
@@ -140,8 +127,16 @@ public class QueueSimulator {
 
     public static int generateServiceTime(){
 
-        int serviceTime = generator.nextInt(5) + 5; //between 5 and 20 minutes
+        int serviceTime = generator.nextInt(15) + 5; //between 5 and 20 minutes
         return serviceTime;
+    }
+
+    public static Queue<Person> getServiceQueue() {
+        return serviceQueue;
+    }
+
+    public static List<Person> getPeopleServed() {
+        return peopleServed;
     }
 
     public static int getIdleTime() {
