@@ -9,12 +9,24 @@ public class Main {
     public static void main(String[] args) {
 
         QueueSimulator.addClients();
-        QueueSimulator.addClient(new Person("Pedro"));
-        QueueSimulator.processService();
+        //QueueSimulator.addClient(new Person("Pedro"));
 
-        System.out.println("customerArrivalTime: "+QueueSimulator.customerArrivalTime());
+        while (!QueueSimulator.serviceQueue.isEmpty()){
+            QueueSimulator.processService();
+        }
 
-        System.out.println("serviceTime: "+QueueSimulator.serviceTime());
+
+        System.out.println(QueueSimulator.peopleServed);
+
+        System.out.println("Average Wait Time: "+QueueSimulator.averageWaitTime());
+        System.out.println("Average Time in the System: "+QueueSimulator.averageTimeInTheSystem());
+        System.out.println("Server Occupancy Rate: "+QueueSimulator.serverOccupancyRate()+"%");
+        System.out.println("Idle Time: "+QueueSimulator.getIdleTime());
+
+
+
+//        QueueSimulator.generateArrivalTime();
+//        QueueSimulator.generateServiceTime();
 
 
     }
