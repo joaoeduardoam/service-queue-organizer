@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c54c946-13bf-42db-8830-a567853f93bb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestQueueSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" afterDir="false" />
     </list>
@@ -33,6 +34,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2hUBYf0yNTC1lU8kuG62wcnYdJz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,6 +44,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ServiceQueueOrganizer.executor": "Run",
+    "JUnit.TestQueueSimulator.testWithIdleTimeBiggerThanZero.executor": "Run",
+    "JUnit.TestQueueSimulator.testWithIdleTimeEqualsZero.executor": "Run",
+    "JUnit.TestQueueSimulator.testWithIdleTimeLessThanZero.executor": "Run",
+    "JUnit.TestQueueSimulator.testWithIncreasingIdleTime.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -58,7 +66,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TestQueueSimulator.testWithIncreasingIdleTime">
     <configuration name="ServiceQueueOrganizer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="service-queue-organizer" />
@@ -66,6 +74,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestQueueSimulator.testWithIdleTimeBiggerThanZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-queue-organizer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestQueueSimulator" />
+      <option name="METHOD_NAME" value="testWithIdleTimeBiggerThanZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQueueSimulator.testWithIdleTimeEqualsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-queue-organizer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestQueueSimulator" />
+      <option name="METHOD_NAME" value="testWithIdleTimeEqualsZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQueueSimulator.testWithIdleTimeLessThanZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-queue-organizer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestQueueSimulator" />
+      <option name="METHOD_NAME" value="testWithIdleTimeLessThanZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQueueSimulator.testWithIncreasingIdleTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-queue-organizer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestQueueSimulator" />
+      <option name="METHOD_NAME" value="testWithIncreasingIdleTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestQueueSimulator.testWithIncreasingIdleTime" />
+        <item itemvalue="JUnit.TestQueueSimulator.testWithIdleTimeEqualsZero" />
+        <item itemvalue="JUnit.TestQueueSimulator.testWithIdleTimeLessThanZero" />
+        <item itemvalue="JUnit.TestQueueSimulator.testWithIdleTimeBiggerThanZero" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

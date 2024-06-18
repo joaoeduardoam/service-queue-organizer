@@ -30,6 +30,13 @@ public class Person {
         count+=1;
     }
 
+    public Person(String name, int ticket, int arrivalTime, int serviceTime) {
+        this.name = name;
+        this.ticket = ticket;
+        this.arrivalTime = arrivalTime;
+        this.serviceTime = serviceTime;
+    }
+
     @Override
     public String toString() {
         return "Person{" +

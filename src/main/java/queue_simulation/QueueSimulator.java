@@ -23,6 +23,13 @@ public class QueueSimulator {
 
     }
 
+    public static void addSpecificClients(Person p1, Person p2, Person p3, Person p4){
+
+        serviceQueue.addAll(Arrays.asList(p1,p2,p3,p4));
+        System.out.println(serviceQueue);
+
+    }
+
 
     public static void processService(){
         Person person = serviceQueue.poll();
@@ -34,7 +41,7 @@ public class QueueSimulator {
             int currentArrivalTime = sumOfPreviousArrivalTimes(person.getTicket()) + person.getArrivalTime();
 
             idleTime += Math.max( 0, currentArrivalTime - sumOfPreviousServiceTimes(person.getTicket()) - idleTime);
-            //System.out.println("IDLE TIME de "+person.getTicket()+": "+idleTime);
+            System.out.println("IDLE TIME de "+person.getTicket()+": "+idleTime);
 
             int waitTime = ( sumOfPreviousServiceTimes(person.getTicket()) + idleTime ) - currentArrivalTime;
 
@@ -127,7 +134,7 @@ public class QueueSimulator {
 
     public static int generateServiceTime(){
 
-        int serviceTime = generator.nextInt(15) + 5; //between 5 and 20 minutes
+        int serviceTime = generator.nextInt(5) + 5; //between 5 and 20 minutes
         return serviceTime;
     }
 
