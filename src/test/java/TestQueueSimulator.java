@@ -3,6 +3,7 @@ import queue_simulation.Person;
 import queue_simulation.QueueSimulator;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
 
@@ -100,6 +101,18 @@ public class TestQueueSimulator {
         assertEquals(expectedAverageTimeInTheSystem, QueueSimulator.averageTimeInTheSystem(), 0.01f);
         assertEquals(expectedServerOccupancyRate, QueueSimulator.serverOccupancyRate().floatValue(),0.01f);
         assertEquals(expectedIdleTime, QueueSimulator.getIdleTime());
+    }
+
+
+
+    @Test
+    public void testWithOnePerson() {
+
+    }
+
+    @Test
+    public void testWithTwoPersons() {
+
     }
 
 

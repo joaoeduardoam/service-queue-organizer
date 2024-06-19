@@ -126,6 +126,84 @@ public class QueueSimulator {
 
     }
 
+
+
+    public static void getDataFromUser(Scanner scanner) {
+
+        boolean keepRunning = true;
+
+        try{
+            while (keepRunning) {
+                System.out.println("\n*****************   Menu Queue Simulator   ****************\n\n\n");
+                System.out.println("1 - Add a person inline;");
+                System.out.println("2 - Process Service;");
+                System.out.println("3 - Show Line;");
+                System.out.println("4 - Quit");
+
+                System.out.print("Enter your choice: ");
+                int choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        System.out.println("Adding a person...");
+                        addPersonByUser(scanner);
+                        break;
+                    case 2:
+                        System.out.println("Processing service...");
+                        keepRunning = false;
+                        break;
+                    case 3:
+                        System.out.println("Showing Line.");
+                        System.out.println(QueueSimulator.getServiceQueue());
+                        break;
+                    case 4:
+                        System.out.println("Exiting the application.");
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Invalid option. Please try again.");
+                        break;
+                }
+            }
+
+        }catch (Exception e){
+            System.out.println("Invalid option. Please try again.");
+            getDataFromUser(new Scanner(System.in));
+        }
+
+
+
+        scanner.close();
+
+    }
+
+    private static void addPersonByUser(Scanner scanner) {
+
+        boolean validInput = false;
+
+        while (!validInput) {
+            System.out.println("\nFill out the person's details:");
+            System.out.print("Name: ");
+            String name = scanner.next();
+            System.out.print("Arrival Time (between 1 and 10): ");
+            int arrivalTime = scanner.nextInt();
+            System.out.print("Service Time (between 5 and 20): ");
+            int serviceTime = scanner.nextInt();
+
+            // Validate inputs
+            if (!name.isBlank() && (arrivalTime >= 1 && arrivalTime <= 10) && (serviceTime >= 5 && serviceTime <= 20)) {
+                System.out.println("Person added successfully!");
+                serviceQueue.add(new Person(name,arrivalTime,serviceTime));
+                validInput = true;
+            } else {
+                System.out.println("Invalid input. Please enter values between the specified ranges.");
+            }
+        }
+
+
+    }
+
+
     public static int generateArrivalTime(){
 
         int arrivalTime = generator.nextInt(10) + 1; //between 1 and 10 minutes
@@ -134,7 +212,7 @@ public class QueueSimulator {
 
     public static int generateServiceTime(){
 
-        int serviceTime = generator.nextInt(5) + 5; //between 5 and 20 minutes
+        int serviceTime = generator.nextInt(15) + 5; //between 5 and 20 minutes
         return serviceTime;
     }
 
@@ -149,4 +227,5 @@ public class QueueSimulator {
     public static int getIdleTime() {
         return idleTime;
     }
+
 }

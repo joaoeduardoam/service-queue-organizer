@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c54c946-13bf-42db-8830-a567853f93bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestQueueSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue_simulation/QueueSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestQueueSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestQueueSimulator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
     "JUnit.TestQueueSimulator.testWithIdleTimeEqualsZero.executor": "Run",
     "JUnit.TestQueueSimulator.testWithIdleTimeLessThanZero.executor": "Run",
     "JUnit.TestQueueSimulator.testWithIncreasingIdleTime.executor": "Run",
+    "JUnit.TestQueueSimulator.testWithUserInputs.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -66,7 +67,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestQueueSimulator.testWithIncreasingIdleTime">
+  <component name="RunManager" selected="Application.ServiceQueueOrganizer">
     <configuration name="ServiceQueueOrganizer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="service-queue-organizer" />
@@ -114,8 +115,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestQueueSimulator.testWithUserInputs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-queue-organizer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestQueueSimulator" />
+      <option name="METHOD_NAME" value="testWithUserInputs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestQueueSimulator.testWithUserInputs" />
         <item itemvalue="JUnit.TestQueueSimulator.testWithIncreasingIdleTime" />
         <item itemvalue="JUnit.TestQueueSimulator.testWithIdleTimeEqualsZero" />
         <item itemvalue="JUnit.TestQueueSimulator.testWithIdleTimeLessThanZero" />

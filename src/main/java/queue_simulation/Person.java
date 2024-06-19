@@ -13,14 +13,14 @@ public class Person {
     private int waitTime;
 
 
-    private static int count = 0;
+    private static int count = 1;
 
 
 
 
     public Person(String name) {
         this.name = name;
-        this.ticket = count+1;
+        this.ticket = count;
         if(ticket==1) {
             this.arrivalTime = 0;
         }else{
@@ -35,6 +35,14 @@ public class Person {
         this.ticket = ticket;
         this.arrivalTime = arrivalTime;
         this.serviceTime = serviceTime;
+    }
+
+    public Person(String name, int arrivalTime, int serviceTime) {
+        this.name = name;
+        this.arrivalTime = arrivalTime;
+        this.serviceTime = serviceTime;
+        this.ticket = count;
+        count+=1;
     }
 
     @Override
